@@ -31,7 +31,7 @@
   <div id="hp"></div>
   <el-row>
     <!--    轮播图开始-->
-    <el-col :span="24" class="banner_bg">
+    <el-col :span="24">
       <div id="top" class="border"></div>
       <div class="block">
         <!--        interval计时器，轮播图展示时间-->
@@ -675,9 +675,7 @@ export default {
 @import '../assets/CSS/homepage_common.css';
 @import 'https://cdn.dowebok.com/98/css/animate.min.css';
 
-/*.banner_bg{*/
-/*  background: #ff867e;*/
-/*}*/
+
 .carousel {
   margin-top: 78px;
   z-index: 0;
