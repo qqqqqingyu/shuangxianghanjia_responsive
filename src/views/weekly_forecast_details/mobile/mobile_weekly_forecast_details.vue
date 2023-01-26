@@ -141,11 +141,12 @@
         </el-card>
       </el-col>
     </el-row>
-
+    {{industryDetailData}}
   </div>
 </template>
 
 <script>
+import { useStore } from 'vuex'
 
 export default {
   name: "mobile_weekly_forecast_details",
@@ -176,6 +177,16 @@ export default {
   //实例销毁之前钩子，移除body标签的属性style
   beforeUnmount() {
     document.body.removeAttribute('style')
+  },
+  mounted() {
+    const store = useStore()
+    // 触发数据获取动作
+    store.dispatch('industryDetail/useIndustryDetailsData')
+  },
+  computed:{
+    details(){
+      return this.$store.getters.industryDetailData;
+    }
   },
   methods: {
     //切换图表

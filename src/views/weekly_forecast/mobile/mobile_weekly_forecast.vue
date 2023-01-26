@@ -50,20 +50,19 @@ export default {
     return {
       // pictureList:pictures,
 
-
-
     }
   },
 
   created() {
 
   },
-
+  mounted() {
+    const store = useStore()
+    // 触发 category 数据获取动作
+    store.dispatch('industryList/useIndustryListData')
+  },
   computed:{
     myList(){
-      const store = useStore()
-      // 触发 category 数据获取动作
-      store.dispatch('industryList/useIndustryListData')
       return this.$store.getters.industryList;
     }
 

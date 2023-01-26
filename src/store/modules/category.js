@@ -1,5 +1,4 @@
 import {number} from '@/constants'
-import {getCategory} from '@/api/category'
 
 /**
  * 处理navigationBar中的数据categorys
@@ -21,7 +20,7 @@ export default {
             state.categorys=[9,8,7,6]
         }
     },
-    // actions:{
+    actions:{
     //     /**
     //      * 获取category数据，并自动保存在vuex中
     //      */
@@ -30,5 +29,5 @@ export default {
     //         context.commit('setCategorys',categorys)
     //
     //     }
-    // }
+    }
 }

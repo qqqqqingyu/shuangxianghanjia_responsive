@@ -1,6 +1,8 @@
 import {createStore} from 'vuex'
 import getters from './getters'
 import category from "./modules/category";
+import industryList from "./modules/industryList";
+import industryDetail from "./modules/industryDetail";
 
 
 const store =createStore({
@@ -17,7 +19,9 @@ const store =createStore({
     },
     getters,
     modules:{
-        category
+        category,
+        industryList,
+        industryDetail
     },
     actions: {},
 
